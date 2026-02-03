@@ -1,0 +1,110 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. Mobile menu toggle ──────────────────────────────────
+  const hamburger  = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+
+      // flip state
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+      mobileMenu.classList.toggle('mobile-menu--open', !isOpen);
+    });
+  }
+
+  // ── 2. Close mobile menu when a link is clicked ───────────
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('mobile-menu--open');
+    });
+  });
+
+  // ── 3. Smooth-scroll for in-page anchors ──────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── 4. Sticky header – shrink on scroll ───────────────────
+  const header = document.querySelector('.header');
+  let lastY    = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+
+    // hide header on scroll-down, show on scroll-up (mobile UX)
+    if (currentY > lastY && currentY > 80) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+
+    header.style.transition = 'transform 0.3s ease';
+    lastY = currentY;
+  }, { passive: true });
+
+  // ── 5. Service cards – staggered entrance on scroll ───────
+  const cards = document.querySelectorAll('.service-card');
+
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity  = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  cards.forEach((card, i) => {
+    // initial hidden state
+    card.style.opacity    = '0';
+    card.style.transform  = 'translateY(28px)';
+    card.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
+    cardObserver.observe(card);
+  });
+
+  // ── 6. Stats counter – animate numbers on scroll into view ─
+  const stats = document.querySelectorAll('.stat__value');
+
+  function animateCounter(el) {
+    const target = el.textContent.replace(/[^0-9]/g, '');   // digits only
+    const suffix = el.textContent.replace(/[0-9]/g, '');     // e.g. "+" or "/"
+    if (!target) return; // skip "24/7" style – leave as-is
+
+    let current = 0;
+    const increment = Math.ceil(Number(target) / 40);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= Number(target)) {
+        current = Number(target);
+        clearInterval(timer);
+      }
+      el.textContent = current + suffix;
+    }, 30);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  stats.forEach(s => statObserver.observe(s));
+
+});

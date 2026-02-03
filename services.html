@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alliance Logistics - Services</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="services.css"/>
+</head>
+<body>
+
+  <!-- ─── Header ─── -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <div class="logo__svg-wrap">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h2 class="logo__text">Alliance Logistics</h2>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="header__nav-wrap">
+          <nav class="nav">
+            <a href="#" class="nav__link">Home</a>
+            <a href="#" class="nav__link nav__link--active">Services</a>
+            <a href="#" class="nav__link">About Us</a>
+            <a href="#" class="nav__link">Contact</a>
+          </nav>
+          <button class="btn btn--primary btn--sm">Get a Quote</button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="#" class="nav__link">Home</a>
+      <a href="#" class="nav__link nav__link--active">Services</a>
+      <a href="#" class="nav__link">About Us</a>
+      <a href="#" class="nav__link">Contact</a>
+      <button class="btn btn--primary btn--sm mobile-menu__btn">Get a Quote</button>
+    </div>
+  </header>
+
+  <!-- ─── Hero Banner ─── -->
+  <section class="hero-banner">
+    <div class="container">
+      <h1 class="hero-banner__title">Our Services</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#" class="breadcrumb__link">Home</a>
+        <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Services</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ─── Main: Alternating Service Rows ─── -->
+  <main>
+
+    <!-- Row 1 – Freight Transportation (image right) -->
+    <section class="service-row service-row--white">
+      <div class="container">
+        <div class="service-row__layout">
+
+          <div class="service-row__text">
+            <h2 class="service-row__title">Freight Transportation</h2>
+            <p class="service-row__desc">
+              Comprehensive road freight capabilities with national and regional coverage.
+              We specialize in time-sensitive deliveries and heavy haulage.
+            </p>
+
+            <ul class="checklist">
+              <li class="checklist__item">
+                <span class="material-symbols-outlined checklist__icon">check_circle</span>
+                <span>National and interstate linehaul networks</span>
+              </li>
+              <li class="checklist__item">
+                <span class="material-symbols-outlined checklist__icon">check_circle</span>
+                <span>Temperature-controlled transport options</span>
+              </li>
+              <li class="checklist__item">
+                <span class="material-symbols-outlined checklist__icon">check_circle</span>
+                <span>Real-time GPS tracking and fleet management</span>
+              </li>
+            </ul>
+
+            <button class="btn btn--ghost btn--sm">
+              Learn More <span class="material-symbols-outlined btn__icon">arrow_forward</span>
+            </button>
+          </div>
+
+          <div class="service-row__media">
+            <div class="service-row__img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJR8l40FOOExzoiNTvJpiJ7XF9UY4-mr0nNmlxDTxJDXQI-8BdvbzXU7O-8eeXr3cgvcoToMSC1o7iYHoXO2ojl36Zptl-yKvLfgp4j7DJSXaLVHoUBmXC-8ESsXDxHSdF3hqC-oG1T9QEGslODAxZa4HPNZ53k1Jh7d1CfVp5hxSwZSs8s9NETLK63p4JQ5cmV8V2na8qaRImTZh9G7wNX8S-nlHyc8Wy7iWgDpjZ5QqUIl0PUiU7dZjeL9ACGtZoEfFwB6-sDA7p')" aria-label="Professional modern logistics semi truck on highway"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 2 – Air, Sea & Road (image left) -->
+    <section class="service-row service-row--alt">
+      <div class="container">
+        <div class="service-row__layout service-row__layout--reverse">
+
+          <div class="service-row__text">
+            <h2 class="service-row__title">Air, Sea &amp; Road Logistics</h2>
+            <p class="service-row__desc">
+              Global shipping routes and multimodal solutions connecting your business to the world.
+              Efficient transit times and reliable carriers for complex international trade.
+            </p>
+
+            <div class="mode-grid">
+              <div class="mode-card">
+                <span class="material-symbols-outlined mode-card__icon">flight</span>
+                <h3 class="mode-card__title">Air Freight</h3>
+                <p class="mode-card__sub">Fast global delivery</p>
+              </div>
+              <div class="mode-card">
+                <span class="material-symbols-outlined mode-card__icon">directions_boat</span>
+                <h3 class="mode-card__title">Sea Freight</h3>
+                <p class="mode-card__sub">Cost-effective shipping</p>
+              </div>
+            </div>
+
+            <button class="btn btn--ghost btn--sm">
+              Explore Global Routes <span class="material-symbols-outlined btn__icon">public</span>
+            </button>
+          </div>
+
+          <div class="service-row__media">
+            <div class="service-row__img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbMK-zhotrMhbVWWb62oW0X9TUxNfFFHcwS8306OkY558s_HV-MCthkYUF6-Od_clWcLq9XsAMU7RZPQW_FwzWwtX8LxDafm7fqIAC-0Tg08jXMr_2ORgbRkF9rLE8ZJJVFvSI-6DafvdMy8eijhbXuoFf0ygRclhDueUXSUaG140WGqemoZ_ahMnj5M6PqIl88YaJFqfVH7Vzq0jr5ZsYcrr9Kms3xce_th_L4AgR6ab0d2OrNWC64EKvf1omW_VB9JQERds9A33-')" aria-label="Large cargo ship at sea port with containers"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 3 – Warehousing (image right) -->
+    <section class="service-row service-row--white">
+      <div class="container">
+        <div class="service-row__layout">
+
+          <div class="service-row__text">
+            <h2 class="service-row__title">Warehousing &amp; Distribution</h2>
+            <p class="service-row__desc">
+              Modern facility hubs focused on storage security, inventory management, and seamless
+              fulfillment. Our warehouses are strategically located to minimize transit times.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature-list__item">
+                <div class="feature-list__icon-wrap">
+                  <span class="material-symbols-outlined feature-list__icon">security</span>
+                </div>
+                <div class="feature-list__body">
+                  <p class="feature-list__title">High-Security Storage</p>
+                  <p class="feature-list__sub">24/7 monitoring and controlled access.</p>
+                </div>
+              </div>
+              <div class="feature-list__item">
+                <div class="feature-list__icon-wrap">
+                  <span class="material-symbols-outlined feature-list__icon">inventory_2</span>
+                </div>
+                <div class="feature-list__body">
+                  <p class="feature-list__title">Inventory Management</p>
+                  <p class="feature-list__sub">Real-time stock levels and reporting.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn--ghost btn--sm">
+              Facility Tour <span class="material-symbols-outlined btn__icon">visibility</span>
+            </button>
+          </div>
+
+          <div class="service-row__media">
+            <div class="service-row__img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDthBID8kaDws7cUItAeE99p-T-bQgKlr9PCYJsTEEYr1g0ZqpnIkODHkNvUS4rnoIbluhpIED_f2CbPq8P0cUtg74ojv00uARiakUoVERbZ0rrGz7x67Dq_Wb6FwpkrgOg7VkS3SEa48LMHv4KxCK69BAi2hMTuUF2Ku7DbvXcciBAoNEQkVL8FVgaH0VYzNzY1jdNQlP9Ux_mSy_Sk0X_0omGpfNgbcFrX2xIg3C6vRZQKT5EdTcSZJ2qqioRBOVadiO2RMjYZmHQ')" aria-label="Modern warehouse interior with organized shelving and forklifts"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 4 – Supply Chain (image left) -->
+    <section class="service-row service-row--alt">
+      <div class="container">
+        <div class="service-row__layout service-row__layout--reverse">
+
+          <div class="service-row__text">
+            <h2 class="service-row__title">Supply Chain Solutions</h2>
+            <p class="service-row__desc">
+              End-to-end optimization and consulting services designed to streamline your business
+              operations. We identify bottlenecks and implement scalable solutions.
+            </p>
+            <p class="service-row__desc">
+              Our team of logistics experts works closely with your business to design a bespoke
+              supply chain that increases efficiency and reduces costs.
+            </p>
+
+            <button class="btn btn--ghost btn--sm">
+              Request Consulting <span class="material-symbols-outlined btn__icon">handshake</span>
+            </button>
+          </div>
+
+          <div class="service-row__media">
+            <div class="service-row__img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQvNy4GGqtW95wtvnR2YQ_dcwnFjC-m8SAY3tokvgui78my3uZyvrJ3vxY9UlI2EVjOiPnRMCYGtFuzGoVCLkOmcTIbjlo6Njyngz4RRXIPDf7NjNtzXnIo_ZPgr0jap1-mUsr9KsyfvYDwmZWxSXL6P4H6CmD44-FzEzO3r3fvGnsHZgxLdhOz_xG7Jkm-zOG-shnlaq2-hyLsopCy2D4BvdnHQpWihUjWLjRYsVzIAFtLAPIm9pkoiZhKNin5jn12JQ6EinHb-jG')" aria-label="Professional team analyzing logistics data on digital screen"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── CTA Band ─── -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2 class="cta__title">Need a Custom Solution?</h2>
+      <p class="cta__subtitle">
+        Our experts are ready to help you optimize your logistics and supply chain needs.
+        Get a tailored quote today.
+      </p>
+      <button class="btn btn--primary btn--lg">Request a Quote</button>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand (spans 2 cols on md) -->
+        <div class="footer__brand">
+          <a href="#" class="logo logo--footer">
+            <div class="logo__svg-wrap logo__svg-wrap--sm">
+              <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="logo__text">Alliance Logistics</h3>
+          </a>
+          <p class="footer__brand-desc">
+            Providing world-class logistics and supply chain management solutions to businesses
+            globally. Dedicated to reliability, speed, and safety.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Services</a></li>
+            <li><a href="#" class="footer__link">Our Fleet</a></li>
+            <li><a href="#" class="footer__link">Global Network</a></li>
+            <li><a href="#" class="footer__link">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact</h4>
+          <ul class="footer__list">
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined footer__contact-icon">mail</span>
+              <span>info@alliancelogistics.com</span>
+            </li>
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined footer__contact-icon">call</span>
+              <span>+1 (800) 555-0199</span>
+            </li>
+            <li class="footer__contact-item">
+              <span class="material-symbols-outlined footer__contact-icon">location_on</span>
+              <span>123 Logistics Dr, Port City</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Alliance Logistics Services. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="services.js"></script>
+</body>
+</html>
