@@ -20,21 +20,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 2. Hide header on scroll-down, reveal on scroll-up ────
+  // ── 2. Sticky header – theme toggle on scroll ───────────────────
   const header = document.querySelector('.header');
-  let lastScrollY = window.scrollY;
+  const logoImg = document.querySelector('.logo_img');
+  // Get threshold from data attribute on body, or use default
+  const scrollThreshold = parseInt(document.body.dataset.scrollThreshold) || 550;
+
+  function updateHeaderTheme(isDark) {
+    if (isDark) {
+      header.classList.add('header--dark');
+      if (logoImg) {
+        logoImg.src = './img/logo_white.png';
+      }
+    } else {
+      header.classList.remove('header--dark');
+      if (logoImg) {
+        logoImg.src = './img/logo_dark.png';
+      }
+    }
+  }
 
   window.addEventListener('scroll', () => {
     const currentY = window.scrollY;
-
-    if (currentY > lastScrollY && currentY > 60) {
-      header.style.transform = 'translateY(-100%)';
-    } else {
-      header.style.transform = 'translateY(0)';
-    }
-
-    lastScrollY = currentY;
+    updateHeaderTheme(currentY > scrollThreshold);
   }, { passive: true });
+
+  // Set initial theme on page load
+  updateHeaderTheme(window.scrollY > scrollThreshold);
 
   // ── 3. Scroll-reveal on service rows ──────────────────────
   // Add the .reveal class to every element we want to animate in.

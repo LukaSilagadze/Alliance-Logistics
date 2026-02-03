@@ -139,7 +139,13 @@ a      { text-decoration: none; color: inherit; }
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid var(--border-200);
-  transition: transform .3s ease;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* Dark theme header */
+.header.header--dark {
+  background-color: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header__inner {
@@ -176,6 +182,13 @@ a      { text-decoration: none; color: inherit; }
   line-height: 1.2;
 }
 
+.logo_img {
+  width: 200px;
+  transition: filter var(--transition);
+}
+
+/* Dark theme logo - image switching handled by JavaScript */
+
 /* ── Desktop Nav ── */
 .header__nav-wrap {
   display: none;
@@ -197,14 +210,14 @@ a      { text-decoration: none; color: inherit; }
 }
 .nav__link:hover { color: var(--primary); }
 
-/* active state – underlined in primary */
-.nav__link--active {
+/* Dark theme nav links */
+.header--dark .nav__link {
+  color: var(--text-300);
+}
+
+.header--dark .nav__link:hover,
+.header--dark .nav__link--active {
   color: var(--primary);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
 }
 
 /* ── Hamburger ── */
@@ -222,7 +235,12 @@ a      { text-decoration: none; color: inherit; }
   height: 2px;
   background-color: var(--navy);
   border-radius: 2px;
-  transition: transform .3s ease, opacity .3s ease;
+  transition: transform .3s ease, opacity .3s ease, background-color var(--transition);
+}
+
+/* Dark theme hamburger */
+.header--dark .hamburger__bar {
+  background-color: #fff;
 }
 .hamburger[aria-expanded="true"] .hamburger__bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger[aria-expanded="true"] .hamburger__bar:nth-child(2) { opacity: 0; }
@@ -236,6 +254,21 @@ a      { text-decoration: none; color: inherit; }
   padding: 1.25rem 1rem 1.5rem;
   background: #fff;
   border-top: 1px solid var(--border-200);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* Dark theme mobile menu */
+.header--dark .mobile-menu {
+  background-color: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header--dark .mobile-menu .nav__link {
+  color: var(--text-300);
+}
+
+.header--dark .mobile-menu .nav__link:hover {
+  color: var(--primary);
 }
 .mobile-menu.mobile-menu--open { display: flex; }
 .mobile-menu .nav__link         { font-size: 1rem; padding: .5rem 0; }

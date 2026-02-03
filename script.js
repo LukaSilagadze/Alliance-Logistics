@@ -33,23 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── 4. Sticky header – shrink on scroll ───────────────────
+  // ── 4. Sticky header – theme toggle on scroll ───────────────────
   const header = document.querySelector('.header');
-  let lastY    = 0;
+  const logoImg = document.querySelector('.logo_img');
+  // Get threshold from data attribute on body, or use default
+  const scrollThreshold = parseInt(document.body.dataset.scrollThreshold) || 550;
+
+  function updateHeaderTheme(isDark) {
+    if (isDark) {
+      header.classList.add('header--dark');
+      if (logoImg) {
+        logoImg.src = './img/logo_white.png';
+      }
+    } else {
+      header.classList.remove('header--dark');
+      if (logoImg) {
+        logoImg.src = './img/logo_dark.png';
+      }
+    }
+  }
 
   window.addEventListener('scroll', () => {
     const currentY = window.scrollY;
-
-    // hide header on scroll-down, show on scroll-up (mobile UX)
-    if (currentY > lastY && currentY > 80) {
-      header.style.transform = 'translateY(-100%)';
-    } else {
-      header.style.transform = 'translateY(0)';
-    }
-
-    header.style.transition = 'transform 0.3s ease';
-    lastY = currentY;
+    updateHeaderTheme(currentY > scrollThreshold);
   }, { passive: true });
+
+  // Set initial theme on page load
+  updateHeaderTheme(window.scrollY > scrollThreshold);
 
   // ── 5. Service cards – staggered entrance on scroll ───────
   const cards = document.querySelectorAll('.service-card');
