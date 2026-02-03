@@ -318,7 +318,59 @@ a      { text-decoration: none; color: inherit; }
 .breadcrumb__current { color: #fff; }
 
 /* ============================================================
-   7.  SERVICE ROWS  (alternating white / gray)
+   7.  COMPACT SERVICES GRID
+   ============================================================ */
+.services-grid-section {
+  background-color: #fff;
+  padding: 3rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--bg-slate-50);
+  border: 1px solid var(--border-100);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-item__icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: .75rem;
+}
+
+.service-item__title {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   8.  SERVICE ROWS  (alternating white / gray)
    ============================================================ */
 .service-row          { padding: 4rem 0; }            /* py-16 */
 .service-row--white   { background-color: #fff; }

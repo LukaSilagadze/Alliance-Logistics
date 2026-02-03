@@ -90,9 +90,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const stats = document.querySelectorAll('.stat__value');
 
   function animateCounter(el) {
-    const target = el.textContent.replace(/[^0-9]/g, '');   // digits only
-    const suffix = el.textContent.replace(/[0-9]/g, '');     // e.g. "+" or "/"
-    if (!target) return; // skip "24/7" style – leave as-is
+    const originalText = el.textContent;
+    
+    // Handle values with "/" (like "24/7")
+    if (originalText.includes('/')) {
+      const parts = originalText.split('/');
+      const firstNum = parseInt(parts[0]) || 0;
+      const secondPart = parts[1] || '';
+      
+      if (firstNum > 0) {
+        let current = 0;
+        const increment = Math.ceil(firstNum / 40);
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= firstNum) {
+            current = firstNum;
+            clearInterval(timer);
+          }
+          el.textContent = current + '/' + secondPart;
+        }, 30);
+      }
+      return;
+    }
+    
+    // Handle regular values with "+" or other suffixes
+    const target = originalText.replace(/[^0-9]/g, '');   // digits only
+    const suffix = originalText.replace(/[0-9]/g, '');     // e.g. "+"
+    if (!target) return; // skip if no digits found
 
     let current = 0;
     const increment = Math.ceil(Number(target) / 40);
