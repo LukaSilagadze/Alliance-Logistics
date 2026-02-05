@@ -114,4 +114,26 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   stats.forEach((s) => statObserver.observe(s));
+
+  // ── 7. Creative Services – tab switching ──────────────────
+  const serviceNavItems = document.querySelectorAll(".services__nav-item");
+  const serviceContents = document.querySelectorAll(".services__content");
+
+  serviceNavItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const serviceId = item.getAttribute("data-service");
+
+      // Update nav items
+      serviceNavItems.forEach((nav) => nav.classList.remove("active"));
+      item.classList.add("active");
+
+      // Update content display
+      serviceContents.forEach((content) => {
+        content.classList.remove("active");
+        if (content.id === `service-${serviceId}`) {
+          content.classList.add("active");
+        }
+      });
+    });
+  });
 });

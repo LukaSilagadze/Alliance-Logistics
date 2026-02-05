@@ -1,283 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alliance Logistics</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alliance Logistics</title>
 
-  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles.css"/>
-</head>
-<body data-scroll-threshold="550">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-scroll-threshold="550">
+    <!-- ─── Header ─── -->
+    <header class="header">
+      <!-- Top row: logo + contact details -->
+      <div class="header__top">
+        <div class="container header__top-inner">
+          <a href="./index.html" class="logo">
+            <img
+              src="./img/logo_white.png"
+              alt="Alliance Logistics"
+              class="logo_img"
+            />
+          </a>
 
-  <!-- ─── Header ─── -->
-  <header class="header">
-    <!-- Top row: logo + contact details -->
-    <div class="header__top">
-      <div class="container header__top-inner">
-        <a href="./index.html" class="logo">
-          <img src="./img/logo_white.png" alt="Alliance Logistics" class="logo_img">
-        </a>
-
-        <div class="header__top-items">
-          <div class="header__top-item">
-            <span class="material-symbols-outlined header__top-icon">schedule</span>
-            <div class="header__top-text">
-              <span>Mon - Sat 9:00 - 18:00</span>
-              <span>Sunday Closed</span>
+          <div class="header__top-items">
+            <div class="header__top-item">
+              <span class="material-symbols-outlined header__top-icon"
+                >schedule</span
+              >
+              <div class="header__top-text">
+                <span>Mon - Sat 9:00 - 18:00</span>
+                <span>Sunday Closed</span>
+              </div>
             </div>
-          </div>
-          <div class="header__top-item">
-            <span class="material-symbols-outlined header__top-icon">mail</span>
-            <div class="header__top-text">
-              <span>Email</span>
-              <span>contact@alliancelogistics.com</span>
+            <div class="header__top-item">
+              <span class="material-symbols-outlined header__top-icon"
+                >mail</span
+              >
+              <div class="header__top-text">
+                <span>Email</span>
+                <span>contact@alliancelogistics.com</span>
+              </div>
             </div>
-          </div>
-          <div class="header__top-item">
-            <span class="material-symbols-outlined header__top-icon">call</span>
-            <div class="header__top-text">
-              <span>Call Us</span>
-              <span>+1 (555) 012-3456</span>
+            <div class="header__top-item">
+              <span class="material-symbols-outlined header__top-icon"
+                >call</span
+              >
+              <div class="header__top-text">
+                <span>Call Us</span>
+                <span>+1 (555) 012-3456</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bottom row: nav, socials, CTA -->
-    <div class="header__bottom">
-      <div class="container header__bottom-inner">
-        <nav class="nav">
-          <a href="index.html" class="nav__link nav__link--active">Home</a>
+      <!-- Bottom row: nav, socials, CTA -->
+      <div class="header__bottom">
+        <div class="container header__bottom-inner">
+          <nav class="nav">
+            <a href="index.html" class="nav__link nav__link--active">Home</a>
+            <a href="services.html" class="nav__link">Services</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+          </nav>
+
+          <div class="header__bottom-right">
+            <div class="header__socials">
+              <a href="#" class="header__social-link" aria-label="Instagram">
+                <span class="material-symbols-outlined header__social-icon"
+                  >photo_camera</span
+                >
+              </a>
+              <a href="#" class="header__social-link" aria-label="Facebook">
+                <span class="material-symbols-outlined header__social-icon"
+                  >group</span
+                >
+              </a>
+              <a href="#" class="header__social-link" aria-label="LinkedIn">
+                <span class="material-symbols-outlined header__social-icon"
+                  >work</span
+                >
+              </a>
+            </div>
+
+            <a href="contact.html" class="btn btn--primary btn--sm header__cta"
+              >Contact Us</a
+            >
+
+            <!-- Mobile Hamburger -->
+            <button
+              class="hamburger"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+            >
+              <span class="hamburger__bar"></span>
+              <span class="hamburger__bar"></span>
+              <span class="hamburger__bar"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <a href="index.html" class="nav__link">Home</a>
           <a href="services.html" class="nav__link">Services</a>
           <a href="about.html" class="nav__link">About</a>
           <a href="contact.html" class="nav__link">Contact</a>
-        </nav>
-
-        <div class="header__bottom-right">
-          <div class="header__socials">
-            <a href="#" class="header__social-link" aria-label="Instagram">
-              <span class="material-symbols-outlined header__social-icon">photo_camera</span>
-            </a>
-            <a href="#" class="header__social-link" aria-label="Facebook">
-              <span class="material-symbols-outlined header__social-icon">group</span>
-            </a>
-            <a href="#" class="header__social-link" aria-label="LinkedIn">
-              <span class="material-symbols-outlined header__social-icon">work</span>
-            </a>
-          </div>
-
-          <a href="contact.html" class="btn btn--primary btn--sm header__cta">Contact Us</a>
-
-          <!-- Mobile Hamburger -->
-          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span class="hamburger__bar"></span>
-            <span class="hamburger__bar"></span>
-            <span class="hamburger__bar"></span>
-          </button>
+          <a href="contact.html"
+            ><button class="btn btn--primary btn--sm mobile-menu__btn">
+              Contact Us
+            </button></a
+          >
         </div>
       </div>
+    </header>
 
-      <!-- Mobile Menu -->
-      <div class="mobile-menu">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="services.html" class="nav__link">Services</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="contact.html" class="nav__link">Contact</a>
-        <a href="contact.html"><button class="btn btn--primary btn--sm mobile-menu__btn">Contact Us</button></a>
-      </div>
-    </div>
-  </header>
+    <!-- ─── Main ─── -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__bg-image"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__dots"></div>
+        <div class="hero__content">
+          <h1 class="hero__title">Reliable<br />Logistics Solutions</h1>
+          <p class="hero__subtitle">
+            Alliance Logistics provides fast, secure, and efficient
+            transportation and supply-chain services tailored for modern
+            enterprise needs.
+          </p>
+          <a href="contact.html"
+            ><button class="btn btn--primary btn--lg">Contact Us</button></a
+          >
+        </div>
+        <div class="hero__accent"></div>
+      </section>
 
-  <!-- ─── Main ─── -->
-  <main>
+      <!-- Services -->
+      <section class="services">
+        <div class="container services__container">
+          <div class="services__nav">
+            <div class="services__nav-item active" data-service="air">
+              <span class="material-symbols-outlined services__nav-icon"
+                >flight</span
+              >
+              <span class="services__nav-text">Air Freight</span>
+            </div>
+            <div class="services__nav-item" data-service="road">
+              <span class="material-symbols-outlined services__nav-icon"
+                >local_shipping</span
+              >
+              <span class="services__nav-text">Road Logistics</span>
+            </div>
+            <div class="services__nav-item" data-service="sea">
+              <span class="material-symbols-outlined services__nav-icon"
+                >sailing</span
+              >
+              <span class="services__nav-text">Ocean Freight</span>
+            </div>
+            <div class="services__nav-item" data-service="rail">
+              <span class="material-symbols-outlined services__nav-icon"
+                >train</span
+              >
+              <span class="services__nav-text">Rail Transport</span>
+            </div>
+            <div class="services__nav-item" data-service="warehouse">
+              <span class="material-symbols-outlined services__nav-icon"
+                >warehouse</span
+              >
+              <span class="services__nav-text">Warehousing</span>
+            </div>
+            <div class="services__nav-item" data-service="supply">
+              <span class="material-symbols-outlined services__nav-icon"
+                >account_tree</span
+              >
+              <span class="services__nav-text">Supply Chain</span>
+            </div>
+          </div>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__bg-image"></div>
-      <div class="hero__overlay"></div>
-      <div class="hero__dots"></div>
-      <div class="hero__content">
-        <h1 class="hero__title">Reliable<br/>Logistics Solutions</h1>
-        <p class="hero__subtitle">
-          Alliance Logistics provides fast, secure, and efficient transportation
-          and supply-chain services tailored for modern enterprise needs.
-        </p>
-        <a href="contact.html"><button class="btn btn--primary btn--lg">Contact Us</button></a>
-      </div>
-      <div class="hero__accent"></div>
-    </section>
+          <div class="services__display">
+            <div class="services__content active" id="service-air">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Air Freight</h1>
+                <p class="services__desc">
+                  Fast and reliable air cargo solutions for time-sensitive
+                  shipments across the globe. We ensure your goods reach their
+                  destination safely and on schedule.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+            <div class="services__content" id="service-road">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1601581875305-f0a3c4c5dba0?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Road Logistics</h1>
+                <p class="services__desc">
+                  Comprehensive trucking and overland transport services
+                  covering domestic and international routes with real-time
+                  tracking and efficient routing.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+            <div class="services__content" id="service-sea">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Ocean Freight</h1>
+                <p class="services__desc">
+                  Cost-effective sea freight solutions for large volume
+                  shipments. We handle full container loads (FCL) and less than
+                  container loads (LCL) worldwide.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+            <div class="services__content" id="service-rail">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Rail Transport</h1>
+                <p class="services__desc">
+                  Environmentally friendly and reliable rail freight services
+                  connecting major industrial hubs across continents for bulk
+                  and heavy cargo.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+            <div class="services__content" id="service-warehouse">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Warehousing</h1>
+                <p class="services__desc">
+                  Modern storage facilities with inventory management,
+                  cross-docking, and distribution services tailored to your
+                  supply chain needs.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+            <div class="services__content" id="service-supply">
+              <div
+                class="services__bg"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&quot;);
+                "
+              ></div>
+              <div class="services__info">
+                <h1 class="services__inner-title">Supply Chain</h1>
+                <p class="services__desc">
+                  End-to-end supply chain optimization to improve efficiency,
+                  reduce costs, and enhance visibility across your entire
+                  logistics network.
+                </p>
+                <a href="services.html" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Services -->
-    <section class="services">
+      <!-- About -->
+      <section class="about">
+        <div class="about__bg"></div>
+        <div class="container about__container">
+          <div class="about__card">
+            <h2 class="about__card-title">ჩვენს შესახებ</h2>
+            <p class="about__card-text">
+              კომპანია „ალიანს ლოჯისტიკი“ საქართველოს ბაზარზე წარმოდგენილია 2011
+              წლიდან, როგორც საერთაშორისო გადამზიდავი ფორვარდერი კომპანია.
+              კომპანია ორიენტირებულია მომხმარებლებისთვის მაღალი ხარისხის
+              მომსახურების მიწოდებაზე, რომელსაც უზრუნველყობს გამოცდილი გუნდი.
+            </p>
+            <a href="about.html" class="btn btn--primary about__card-btn">
+              გაიგეთ მეტი
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats-section">
+        <div class="container container--stats">
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__value">15+</span>
+              <span class="stat__label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">200+</span>
+              <span class="stat__label">Global Partners</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">24/7</span>
+              <span class="stat__label">Active Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-header__title">Our Services</h2>
-          <span class="section-header__bar"></span>
-        </div>
-
-        <div class="services__grid">
-
-          <div class="service-card">
-            <div class="service-card__image" style="background-image: url('https://images.unsplash.com/photo-1601581875305-f0a3c4c5dba0?q=80&w=800');"></div>
-            <div class="service-card__icon-wrap">
-              <span class="material-symbols-outlined service-card__icon">local_shipping</span>
-            </div>
-            <div class="service-card__body">
-              <h3 class="service-card__title">Freight Transportation</h3>
-              <p class="service-card__desc">
-                Fast and secure freight moving across domestic and international
-                borders with real-time tracking.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800');"></div>
-            <div class="service-card__icon-wrap">
-              <span class="material-symbols-outlined service-card__icon">public</span>
-            </div>
-            <div class="service-card__body">
-              <h3 class="service-card__title">Air, Sea &amp; Road Logistics</h3>
-              <p class="service-card__desc">
-                Multimodal transport options optimized for cost-efficiency and
-                time-sensitive delivery schedules.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800');"></div>
-            <div class="service-card__icon-wrap">
-              <span class="material-symbols-outlined service-card__icon">warehouse</span>
-            </div>
-            <div class="service-card__body">
-              <h3 class="service-card__title">Warehousing</h3>
-              <p class="service-card__desc">
-                Safe, climate-controlled storage facilities with advanced
-                inventory management systems.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-card__image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800');"></div>
-            <div class="service-card__icon-wrap">
-              <span class="material-symbols-outlined service-card__icon">account_tree</span>
-            </div>
-            <div class="service-card__body">
-              <h3 class="service-card__title">Supply Chain Solutions</h3>
-              <p class="service-card__desc">
-                End-to-end optimized supply chain flow to maximize efficiency
-                and reduce operational overhead.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about">
-      <div class="container about__inner">
-        <div class="about__content-wrapper">
-          <div class="about__text-content">
-            <h2 class="about__title">About Alliance Logistics</h2>
-            <p class="about__quote">
-              "Alliance Logistics is a professional logistics company focused on
-              dependable delivery, global reach, and customer satisfaction. We bridge
-              the gap between businesses and their markets through innovative
-              infrastructure and unwavering commitment to excellence."
+        <div class="footer__grid">
+          <!-- Brand -->
+          <div class="footer__brand">
+            <a href="index.html" class="logo logo--light">
+              <img
+                src="./img/logo_white.png"
+                alt="Alliance Logistics"
+                class="logo_img"
+              />
+            </a>
+            <p class="footer__brand-desc">
+              Leading the way in global logistics and supply chain management.
+              Dependable, fast, and secure.
             </p>
           </div>
-          <div class="about__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800" alt="Modern logistics warehouse facility" class="about__image">
+
+          <!-- Quick Links -->
+          <div class="footer__col">
+            <h4 class="footer__col-title">Quick Links</h4>
+            <ul class="footer__list">
+              <li><a href="services.html" class="footer__link">Services</a></li>
+              <li><a href="about.html" class="footer__link">About Us</a></li>
+              <li><a href="#" class="footer__link">Track Shipment</a></li>
+              <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contact Info</h4>
+            <ul class="footer__list">
+              <li class="footer__contact-item">
+                <span class="material-symbols-outlined footer__contact-icon"
+                  >location_on</span
+                >
+                <span>123 Logistics Plaza, Industrial Way, NY 10001</span>
+              </li>
+              <li class="footer__contact-item">
+                <span class="material-symbols-outlined footer__contact-icon"
+                  >call</span
+                >
+                <span>+1 (555) 012-3456</span>
+              </li>
+              <li class="footer__contact-item">
+                <span class="material-symbols-outlined footer__contact-icon"
+                  >mail</span
+                >
+                <span>contact@alliancelogistics.com</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="stats">
-          <div class="stat">
-            <span class="stat__value">15+</span>
-            <span class="stat__label">Years Experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">200+</span>
-            <span class="stat__label">Global Partners</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">24/7</span>
-            <span class="stat__label">Active Support</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ─── Footer ─── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-
-        <!-- Brand -->
-        <div class="footer__brand">
-          <a href="index.html" class="logo logo--light">
-            <img src="./img/logo_white.png" alt="Alliance Logistics" class="logo_img">
-          </a>
-          <p class="footer__brand-desc">
-            Leading the way in global logistics and supply chain management.
-            Dependable, fast, and secure.
+        <!-- Bottom bar -->
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy; 2024 Alliance Logistics. All rights reserved.
           </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer__col">
-          <h4 class="footer__col-title">Quick Links</h4>
-          <ul class="footer__list">
-            <li><a href="services.html" class="footer__link">Services</a></li>
-            <li><a href="about.html" class="footer__link">About Us</a></li>
-            <li><a href="#" class="footer__link">Track Shipment</a></li>
-            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer__col">
-          <h4 class="footer__col-title">Contact Info</h4>
-          <ul class="footer__list">
-            <li class="footer__contact-item">
-              <span class="material-symbols-outlined footer__contact-icon">location_on</span>
-              <span>123 Logistics Plaza, Industrial Way, NY 10001</span>
-            </li>
-            <li class="footer__contact-item">
-              <span class="material-symbols-outlined footer__contact-icon">call</span>
-              <span>+1 (555) 012-3456</span>
-            </li>
-            <li class="footer__contact-item">
-              <span class="material-symbols-outlined footer__contact-icon">mail</span>
-              <span>contact@alliancelogistics.com</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 Alliance Logistics. All rights reserved.</p>
-        <div class="footer__socials">
-          <a href="#" class="footer__social">Twitter</a>
-          <a href="#" class="footer__social">LinkedIn</a>
-          <a href="#" class="footer__social">Instagram</a>
+          <div class="footer__socials">
+            <a href="#" class="footer__social">Twitter</a>
+            <a href="#" class="footer__social">LinkedIn</a>
+            <a href="#" class="footer__social">Instagram</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
