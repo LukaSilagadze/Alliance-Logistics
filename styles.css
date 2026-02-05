@@ -428,8 +428,8 @@ a {
 
 .hero__title {
   color: #fff;
-  font-size: clamp(2.75rem, 6vw, 3.75rem); /* 5xl → 6xl */
-  font-weight: 900;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.025em;
   margin-bottom: 1.5rem;
@@ -667,7 +667,7 @@ a {
 .about__bg {
   position: absolute;
   inset: 0;
-  background-image: url("./img/about_img.jpg");
+  background-image: url("./img/about_img1.avif");
   background-size: cover;
   background-position: center;
   z-index: 0;
