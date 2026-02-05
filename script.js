@@ -33,26 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── 4. Sticky header – theme toggle on scroll ───────────────────
-  const header = document.querySelector('.header');
-  const logoImg = document.querySelector('.logo_img');
-  // Get threshold from data attribute on body, or use default
-  const scrollThreshold = parseInt(document.body.dataset.scrollThreshold) || 550;
-
-  function updateHeaderTheme(isDark) {
-    if (isDark) {
-      header.classList.add('header--dark');
-      if (logoImg) {
-        logoImg.src = './img/logo_white.png';
-      }
-    } else {
-      header.classList.remove('header--dark');
-      if (logoImg) {
-        logoImg.src = './img/logo_dark.png';
-      }
-    }
-  }
-
   window.addEventListener('scroll', () => {
     const currentY = window.scrollY;
     updateHeaderTheme(currentY > scrollThreshold);
