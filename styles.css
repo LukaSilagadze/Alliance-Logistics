@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+
 /* ============================================================
    0. RESET & BASE
    ============================================================ */
@@ -41,7 +43,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
   background-color: var(--navy);
   color: var(--text-900);
   line-height: 1.5;
@@ -663,7 +667,7 @@ a {
 .about__bg {
   position: absolute;
   inset: 0;
-  background-image: url("https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1600");
+  background-image: url("./img/about_img.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;
