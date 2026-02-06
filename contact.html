@@ -13,6 +13,11 @@
 
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/dc2d1e509b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body data-scroll-threshold="166">
     <!-- ─── Header ─── -->
@@ -35,7 +40,6 @@
               >
               <div class="header__top-text">
                 <span>ორშ - შაბ 9:00 - 18:00</span>
-                <span>კვირა დაკეტილია</span>
               </div>
             </div>
             <div class="header__top-item">
@@ -44,7 +48,8 @@
               >
               <div class="header__top-text">
                 <span>ელ-ფოსტა</span>
-                <span>contact@alliancelogistics.com</span>
+                <span>z.gigauri@alogistics.ge</span>
+                <span>office@alogistics.ge</span>
               </div>
             </div>
             <div class="header__top-item">
@@ -53,7 +58,8 @@
               >
               <div class="header__top-text">
                 <span>დაგვიკავშირდით</span>
-                <span>+1 (555) 012-3456</span>
+                <span>Mob: +995 599 646410</span>
+                <span>Office: +995 32 2194447</span>
               </div>
             </div>
           </div>
@@ -75,19 +81,13 @@
           <div class="header__bottom-right">
             <div class="header__socials">
               <a href="#" class="header__social-link" aria-label="Instagram">
-                <span class="material-symbols-outlined header__social-icon"
-                  >photo_camera</span
-                >
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
               <a href="#" class="header__social-link" aria-label="Facebook">
-                <span class="material-symbols-outlined header__social-icon"
-                  >group</span
-                >
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
               <a href="#" class="header__social-link" aria-label="LinkedIn">
-                <span class="material-symbols-outlined header__social-icon"
-                  >work</span
-                >
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
 
@@ -143,75 +143,6 @@
       <section class="contact-section">
         <div class="container">
           <div class="contact-section__inner">
-            <!-- Contact Form -->
-            <div class="contact-form">
-              <h2 class="contact-form__title">დაგვიკავშირდით</h2>
-              <p class="contact-form__subtitle">
-                შეავსეთ ქვემოთ მოცემული ფორმა და ჩვენ რაც შეიძლება მალე
-                დაგიკავშირდებით.
-              </p>
-
-              <form class="form" action="#" method="POST">
-                <div class="form__group">
-                  <label for="name" class="form__label">სახელი</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="form__input"
-                    required
-                  />
-                </div>
-
-                <div class="form__group">
-                  <label for="email" class="form__label">ელ-ფოსტა</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form__input"
-                    required
-                  />
-                </div>
-
-                <div class="form__group">
-                  <label for="phone" class="form__label">ტელეფონი</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    class="form__input"
-                  />
-                </div>
-
-                <div class="form__group">
-                  <label for="subject" class="form__label">თემა</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    class="form__input"
-                    required
-                  />
-                </div>
-
-                <div class="form__group">
-                  <label for="message" class="form__label">შეტყობინება</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="form__textarea"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn--primary btn--lg">
-                  შეტყობინების გაგზავნა
-                </button>
-              </form>
-            </div>
-
             <!-- Contact Info -->
             <div class="contact-info">
               <h2 class="contact-info__title">საკონტაქტო ინფორმაცია</h2>
@@ -219,15 +150,8 @@
                 დაგვიკავშირდით ნებისმიერი ქვემოთ მოცემული არხის საშუალებით.
               </p>
 
-              <div class="contact-info__image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800"
-                  alt="Alliance Logistics office location"
-                  class="contact-info__image"
-                />
-              </div>
-
               <div class="contact-info__list">
+                <!-- Address -->
                 <div class="contact-info__item">
                   <div class="contact-info__icon-wrap">
                     <span class="material-symbols-outlined contact-info__icon"
@@ -237,11 +161,12 @@
                   <div class="contact-info__content">
                     <h3 class="contact-info__label">მისამართი</h3>
                     <p class="contact-info__text">
-                      123 Logistics Plaza, Industrial Way, NY 10001
+                      11 A.Apakidze str. floor #8. Tbilisi, Georgia
                     </p>
                   </div>
                 </div>
 
+                <!-- Phone -->
                 <div class="contact-info__item">
                   <div class="contact-info__icon-wrap">
                     <span class="material-symbols-outlined contact-info__icon"
@@ -250,10 +175,14 @@
                   </div>
                   <div class="contact-info__content">
                     <h3 class="contact-info__label">ტელეფონი</h3>
-                    <p class="contact-info__text">+1 (555) 012-3456</p>
+                    <p class="contact-info__text">
+                      Mob: +995 599 646410<br />
+                      Office: +995 32 2194447
+                    </p>
                   </div>
                 </div>
 
+                <!-- Email -->
                 <div class="contact-info__item">
                   <div class="contact-info__icon-wrap">
                     <span class="material-symbols-outlined contact-info__icon"
@@ -263,25 +192,24 @@
                   <div class="contact-info__content">
                     <h3 class="contact-info__label">ელ-ფოსტა</h3>
                     <p class="contact-info__text">
-                      contact@alliancelogistics.com
+                      z.gigauri@alogistics.ge<br />
+                      office@alogistics.ge
                     </p>
                   </div>
                 </div>
+              </div>
 
-                <div class="contact-info__item">
-                  <div class="contact-info__icon-wrap">
-                    <span class="material-symbols-outlined contact-info__icon"
-                      >schedule</span
-                    >
-                  </div>
-                  <div class="contact-info__content">
-                    <h3 class="contact-info__label">სამუშაო საათები</h3>
-                    <p class="contact-info__text">
-                      ორშაბათი - პარასკევი: 8:00 - 18:00<br />შაბათი: 9:00 -
-                      14:00
-                    </p>
-                  </div>
-                </div>
+              <!-- Map iframe -->
+              <div class="contact-info__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d722.3229161278207!2d44.77982811787717!3d41.7201225032641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sApakidze%20str!5e1!3m2!1sen!2sge!4v1770399184245!5m2!1sen!2sge"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -302,10 +230,6 @@
                 class="logo_img"
               />
             </a>
-            <p class="footer__brand-desc">
-              ლიდერი გლობალურ ლოჯისტიკასა და მომწოდებელთა ჯაჭვის მართვაში.
-              საიმედო, სწრაფი და უსაფრთხო.
-            </p>
           </div>
 
           <!-- Quick Links -->
@@ -333,19 +257,21 @@
                 <span class="material-symbols-outlined footer__contact-icon"
                   >location_on</span
                 >
-                <span>123 Logistics Plaza, Industrial Way, NY 10001</span>
+                <span>11 A.Apakidze str. floor #8.  Tbilisi, Georgia</span>
               </li>
               <li class="footer__contact-item">
                 <span class="material-symbols-outlined footer__contact-icon"
                   >call</span
                 >
-                <span>+1 (555) 012-3456</span>
+                <span>Mob:   +995 599 646410</span>
+                <span>Office: +995 32 2194447</span>
               </li>
               <li class="footer__contact-item">
                 <span class="material-symbols-outlined footer__contact-icon"
                   >mail</span
                 >
-                <span>contact@alliancelogistics.com</span>
+                <span>z.gigauri@alogistics.ge</span>
+                <span>office@alogistics.ge</span>
               </li>
             </ul>
           </div>
@@ -357,9 +283,9 @@
             &copy; 2024 ალიანს ლოჯისტიკი. ყველა უფლება დაცულია.
           </p>
           <div class="footer__socials">
-            <a href="#" class="footer__social">Twitter</a>
+            <a href="#" class="footer__social">Facebook</a>
             <a href="#" class="footer__social">LinkedIn</a>
-            <a href="#" class="footer__social">Instagram</a>
+            <a href="#" class="footer__social">WhatsApp</a>
           </div>
         </div>
       </div>
