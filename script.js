@@ -1,26 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ── 1. Mobile menu toggle ──────────────────────────────────
-  const hamburger = document.querySelector(".hamburger");
-  const mobileMenu = document.querySelector(".mobile-menu");
-
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener("click", () => {
-      const isOpen = hamburger.getAttribute("aria-expanded") === "true";
-
-      // flip state
-      hamburger.setAttribute("aria-expanded", String(!isOpen));
-      mobileMenu.classList.toggle("mobile-menu--open", !isOpen);
-    });
-  }
-
-  // ── 2. Close mobile menu when a link is clicked ───────────
-  mobileMenu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.setAttribute("aria-expanded", "false");
-      mobileMenu.classList.remove("mobile-menu--open");
-    });
-  });
-
   // ── 3. Smooth-scroll for in-page anchors ──────────────────
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
