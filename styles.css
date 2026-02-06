@@ -87,6 +87,13 @@ a {
   padding-right: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* ============================================================
    3. BUTTONS
    ============================================================ */
@@ -914,8 +921,45 @@ a {
 }
 
 @media (max-width: 767px) {
+  .services,
+  .stats-section,
+  .cta,
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .stats-section {
+    padding-top: 2rem;
+  }
+
   .stats {
-    font-size:;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .stat__value {
+    font-size: 1.5rem;
+  }
+  .stat__label {
+    font-size: 0.65rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+@media (max-width: 480px) {
+  .services__content.active {
+    padding: 2rem 1rem;
+  }
+
+  .about__card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
   }
 }
 
