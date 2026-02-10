@@ -363,6 +363,20 @@ a {
   display: block;
 }
 
+/* Crop top 20px of embedded iframe (pull iframe up and enlarge it) */
+.service-row__map {
+  position: relative;
+}
+
+.service-row__map iframe {
+  display: block;
+  position: relative;
+  top: -60px; /* move iframe content up to crop top 20px */
+  width: 100%;
+  height: calc(100% + 60px); /* ensure iframe fills the container after shifting */
+  border: 0;
+}
+
 /* ============================================================
    8.  CHECKLIST  (used in Freight row)
    ============================================================ */
