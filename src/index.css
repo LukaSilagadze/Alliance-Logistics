@@ -449,6 +449,7 @@ a {
 /* ============================================================
    6. HERO
    ============================================================ */
+
 .hero {
   position: relative;
   background-color: var(--navy);
@@ -460,7 +461,7 @@ a {
 
 /* Background image */
 .hero__bg-image {
-  background-image: url("img/cover2.png");
+  background-image: url("/img/cover2.png");
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -830,7 +831,7 @@ a {
 .about__bg {
   position: absolute;
   inset: 0;
-  background-image: url("./img/contaner.png");
+  background-image: url("/img/contaner.png");
   background-size: cover;
   background-position: center;
   z-index: 0;
