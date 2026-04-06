@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -30,14 +33,14 @@ const Header = () => {
             <div className="header__top-item">
               <span className="material-symbols-outlined header__top-icon">schedule</span>
               <div className="header__top-text">
-                <span>ორშაბათი - პარასკევი</span>
-                <span>10:00 - 18:00</span>
+                <span>{t('header.monday_friday')}</span>
+                <span>{t('header.monday_friday_hours')}</span>
               </div>
             </div>
             <div className="header__top-item">
               <span className="material-symbols-outlined header__top-icon">mail</span>
               <div className="header__top-text">
-                <span>ელ-ფოსტა</span>
+                <span>{t('header.email')}</span>
                 <span>z.gigauri@alogistics.ge</span>
                 <span>office@alogistics.ge</span>
               </div>
@@ -45,11 +48,12 @@ const Header = () => {
             <div className="header__top-item">
               <span className="material-symbols-outlined header__top-icon">call</span>
               <div className="header__top-text">
-                <span>დაგვიკავშირდით</span>
+                <span>{t('header.contact_us_top')}</span>
                 <span>Mob: +995 599 646410</span>
                 <span>Office: +995 32 2194447</span>
               </div>
             </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
@@ -69,10 +73,10 @@ const Header = () => {
           </button>
 
           <nav className="nav">
-            <Link to="/" className={getLinkClass("/")} onClick={closeMobileMenu}>მთავარი</Link>
-            <Link to="/services" className={getLinkClass("/services")} onClick={closeMobileMenu}>სერვისები</Link>
-            <Link to="/about" className={getLinkClass("/about")} onClick={closeMobileMenu}>ჩვენს შესახებ</Link>
-            <Link to="/contact" className={getLinkClass("/contact")} onClick={closeMobileMenu}>კონტაქტი</Link>
+            <Link to="/" className={getLinkClass("/")} onClick={closeMobileMenu}>{t('header.nav_home')}</Link>
+            <Link to="/services" className={getLinkClass("/services")} onClick={closeMobileMenu}>{t('header.nav_services')}</Link>
+            <Link to="/about" className={getLinkClass("/about")} onClick={closeMobileMenu}>{t('header.nav_about')}</Link>
+            <Link to="/contact" className={getLinkClass("/contact")} onClick={closeMobileMenu}>{t('header.nav_contact')}</Link>
           </nav>
 
           <div className="header__bottom-right">
@@ -88,7 +92,7 @@ const Header = () => {
               </a>
             </div>
 
-            <Link to="/contact" className="btn btn--primary btn--sm header__cta">დაგვიკავშირდით</Link>
+            <Link to="/contact" className="btn btn--primary btn--sm header__cta">{t('header.cta_contact')}</Link>
           </div>
         </div>
       </div>
@@ -96,10 +100,10 @@ const Header = () => {
       {/* Mobile Menu (Optional structure if it exists, matching original behavior) */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'mobile-menu--open' : ''}`}>
         <nav className="mobile-menu__nav">
-          <Link to="/" className="mobile-menu__link" onClick={closeMobileMenu}>მთავარი</Link>
-          <Link to="/services" className="mobile-menu__link" onClick={closeMobileMenu}>სერვისები</Link>
-          <Link to="/about" className="mobile-menu__link" onClick={closeMobileMenu}>ჩვენს შესახებ</Link>
-          <Link to="/contact" className="mobile-menu__link" onClick={closeMobileMenu}>კონტაქტი</Link>
+          <Link to="/" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_home')}</Link>
+          <Link to="/services" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_services')}</Link>
+          <Link to="/about" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_about')}</Link>
+          <Link to="/contact" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_contact')}</Link>
         </nav>
       </div>
     </header>

@@ -1,0 +1,112 @@
+{
+  "header": {
+    "monday_friday": "Monday - Friday",
+    "email": "Email",
+    "contact_us_top": "Contact Us",
+    "nav_home": "Home",
+    "nav_services": "Services",
+    "nav_about": "About Us",
+    "nav_contact": "Contact",
+    "cta_contact": "Contact Us",
+    "monday_friday_hours": "10:00 - 18:00"
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "cargo_tracking": "Cargo Tracking",
+    "privacy_policy": "Privacy Policy",
+    "contact_info": "Contact Information",
+    "copyright": "Alliance Logistics. All rights reserved."
+  },
+  "stats": {
+    "years_experience": "Years of Experience",
+    "global_partner": "Global Partners",
+    "active_support": "Active Support",
+    "global_support": "Global Support"
+  },
+  "home": {
+    "hero_title": "Reliable<br />Logistics Solutions",
+    "hero_subtitle": "Alliance Logistics offers fast, reliable and competitive international logistics services for any type of cargo.",
+    "cta": "Contact Us",
+    "air_freight": "Air Freight",
+    "road_freight": "Road Freight",
+    "sea_freight": "Sea Freight",
+    "rail_freight": "Rail Freight",
+    "warehouse_oversized": "Oversized Cargo",
+    "air_desc": "Alliance Logistics Ltd. carries out air transportation from airport to airport and door to door worldwide. The company provides full logistics services, including customs clearance, transportation of special cargo, insurance and documentation preparation.",
+    "learn_more": "Learn More",
+    "road_ftl": "Full Truck Load (FTL)",
+    "road_ftl_desc": "Alliance Logistics carries out land transportation and transit between Europe and Asia with full door-to-door service.",
+    "road_ltl": "Less than Truck Load (LTL)",
+    "road_ltl_desc": "The company offers LTL transportation to Europe, Turkey and Asia with consolidation and documentation preparation.",
+    "sea_desc": "We offer sea transportation for both full and grouped cargo. Container shipping from port to port, as well as from loading to unloading address.",
+    "rail_desc": "The priority direction of the company in rail transportation is Asia, namely China and Kazakhstan. We serve both import and export to these countries.",
+    "oversize_desc": "We offer customers oversized cargo transportation by land, sea and rail. The main directions are agricultural sector, construction sphere, heavy equipment, etc.",
+    "about_title": "About Us",
+    "about_text": "Alliance Logistics has been present on the Georgian market since 2011 as an international freight forwarder. The company focuses on providing high quality services to its customers, provided by an experienced team."
+  },
+  "about": {
+    "title": "About Us",
+    "text1": "Alliance Logistics has been present on the Georgian market since 2011 as an international freight forwarder. The company focuses on providing high quality services to its customers, provided by an experienced team.",
+    "text2": "Our company carries out transportation of cargo of any kind or size by land, sea, rail and air. With the involvement of our reliable partners, we ensure the execution of small or large projects in a short time and at competitive prices.",
+    "text3": "It is important for the company to deliver products to their destination in the shortest possible time, with minimal customer involvement and timely updated statuses.",
+    "text4": "The company's goal is to constantly update directions, as well as control and improve transportation rates or transit times."
+  },
+  "contact": {
+    "title": "Contact",
+    "info_title": "Contact Information",
+    "info_subtitle": "Contact us via any of the channels below.",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email"
+  },
+  "services": {
+    "title": "Our Services",
+    "road": {
+      "title": "Road Freight",
+      "p1": "One of the company's priority directions is land transportation. Alliance Logistics carries out both imports to Georgia and transit cargo through Georgia from Europe to Asia and vice versa. Our services include:",
+      "check1": "Door-to-door transportation",
+      "check2": "Transportation of dangerous, flammable ADR type cargo",
+      "check3": "Transportation of alcoholic beverages",
+      "check4": "Provision of appropriate customs formalities",
+      "check5": "Warehousing at appropriate customs terminals",
+      "p2": "Alliance Logistics is distinguished by competitive prices in LTL transportation. Cargo is consolidated in several cities in Europe, as well as in Asia and Turkey.",
+      "check6": "Transportation of standard dry cargo",
+      "check7": "Transportation of refrigerated and flammable cargo",
+      "check8": "Providing door-to-door delivery",
+      "check9": "Preparation of EX 1, EURO1, CMR, T1 documents",
+      "check10": "Warehousing at appropriate customs and private terminals.",
+      "check11": "Providing transport and brokerage services in any European country"
+    },
+    "air": {
+      "title": "Air Freight",
+      "p1": "In Alliance Logistics, air shipments are carried out with airport-to-airport and door-to-door delivery of cargo. With the involvement of our reliable partners, we offer the following air transportation services.",
+      "check1": "Cargo collection worldwide",
+      "check2": "Customs-brokerage services",
+      "check3": "Door-to-door transportation globally",
+      "check4": "Consulting services",
+      "check5": "Transportation of dangerous and special cargo",
+      "check6": "Fast forwarding service worldwide",
+      "check7": "Individual insurance",
+      "check8": "Preparation of transportation documentation"
+    },
+    "sea": {
+      "title": "Sea Freight",
+      "p1": "We offer sea transportation for both full and grouped cargo. Container shipping from port to port, as well as from the loading address to the unloading address. Our services include:",
+      "check1": "Full and combined container transportation",
+      "check2": "Transportation of dangerous goods / ADR",
+      "check3": "Ship chartering",
+      "check4": "Port to port transportation",
+      "check5": "Design of heavy and oversized cargo",
+      "check6": "Customs services"
+    },
+    "rail": {
+      "title": "Rail Freight",
+      "p1": "The company's priority direction in rail transportation is Asia, particularly China and Kazakhstan. We manage both imports to Georgia and exports from Georgia to these regions."
+    },
+    "oversize": {
+      "title": "Oversized Cargo",
+      "p1": "Alliance Logistics is actively involved in project work. We offer customers the transport of oversized cargo by land, sea, and rail. The main sectors are agriculture, construction, heavy equipment, etc.",
+      "p2": "During transportation, special attention is paid to proper load control and insurance conditions. This minimizes transportation risks."
+    }
+  }
+}

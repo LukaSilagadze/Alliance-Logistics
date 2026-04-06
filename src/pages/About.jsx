@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StatCounter from '../components/StatCounter';
 import './about.css'; // importing about specific css
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <main>
       {/* Hero Banner */}
@@ -14,7 +16,7 @@ const About = () => {
         ></div>
         <div className="hero-banner__overlay"></div>
         <div className="container">
-          <h1 className="hero-banner__title">ჩვენს შესახებ</h1>
+          <h1 className="hero-banner__title">{t('about.title')}</h1>
         </div>
       </section>
 
@@ -23,19 +25,12 @@ const About = () => {
         <div className="container about-content__container">
           <div className="about-content__inner">
             <div className="about-content__text-section">
-              <h2 className="about-content__title">ჩვენს შესახებ</h2>
+              <h2 className="about-content__title">{t('about.title')}</h2>
               <p className="about-content__text">
-                კომპანია „ალიანს ლოჯისტიკი“ საქართველოს ბაზარზე წარმოდგენილია
-                2011 წლიდან, როგორც საერთაშორისო გადამზიდავი ფორვარდერი
-                კომპანია. კომპანია ორიენტირებულია მომხმარებლებისთვის მაღალი
-                ხარისხის მომსახურების მიწოდებაზე, რომელსაც უზრუნველყობს
-                გამოცდილი გუნდი.
+                {t('about.text1')}
               </p>
               <p className="about-content__text">
-                ჩვენი კომპანია ახორციელებს ნებისმიერი სახის თუ ზომის ტვირთების
-                გადაზიდვას სახმელეთო, საჰაერო, სარკინიგზო და საზღვაო გზით. ჩვენი
-                სანდო პარტნიორების ჩართულობით მოკლე დროში და კონკურენტულ ფასებში
-                ვუზრუნველვყოფთ მცირე თუ დიდი პროექტების შესრულებას.
+                {t('about.text2')}
               </p>
             </div>
             <div className="about-content__image-section">
@@ -52,14 +47,10 @@ const About = () => {
             </div>
             <div className="about-content__text-section">
               <p className="about-content__text">
-                კომპანიისთვის მნიშვნელოვანია, დამკვეთის მინიმალური ჩართულობით,
-                დროულად განახლებული სტატუსებით, მაქსიმალურად მოკლე დროში მოხდეს
-                პროდუქციის დანიშნულების ადგილზე მიწოდება.
+                {t('about.text3')}
               </p>
               <p className="about-content__text">
-                კომპანიის მიზანია მუდმივი განახლება როგორც მიმართულებების, ასევე
-                კონტროლი და გაუმჯობესება გადაზიდვის ტარიფების თუ ტრანზიტული
-                ვადების.
+                {t('about.text4')}
               </p>
             </div>
           </div>
@@ -70,9 +61,9 @@ const About = () => {
       <section className="stats-section">
         <div className="container">
           <div className="stats">
-            <StatCounter value="15+" label="წლიანი გამოცდილება" />
-            <StatCounter value="200+" label="გლობალური პარტნიორი" />
-            <StatCounter value="24/7" label="აქტიური მხარდაჭერა" />
+            <StatCounter value="15+" label={t('stats.years_experience')} />
+            <StatCounter value="200+" label={t('stats.global_partner')} />
+            <StatCounter value="24/7" label={t('stats.active_support')} />
           </div>
         </div>
       </section>

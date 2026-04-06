@@ -1,7 +1,9 @@
 import React from 'react';
 import './contact.css'; // importing contact specific css
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <main>
       {/* Hero Banner */}
@@ -14,7 +16,7 @@ const Contact = () => {
         ></div>
         <div className="hero-banner__overlay"></div>
         <div className="container">
-          <h1 className="hero-banner__title">კონტაქტი</h1>
+          <h1 className="hero-banner__title">{t('contact.title')}</h1>
         </div>
       </section>
 
@@ -24,9 +26,9 @@ const Contact = () => {
           <div className="contact-section__inner">
             {/* Contact Info */}
             <div className="contact-info">
-              <h2 className="contact-info__title">საკონტაქტო ინფორმაცია</h2>
+              <h2 className="contact-info__title">{t('contact.info_title')}</h2>
               <p className="contact-info__subtitle">
-                დაგვიკავშირდით ნებისმიერი ქვემოთ მოცემული არხის საშუალებით.
+                {t('contact.info_subtitle')}
               </p>
 
               <div className="contact-info__list">
@@ -36,7 +38,7 @@ const Contact = () => {
                     <span className="material-symbols-outlined contact-info__icon">location_on</span>
                   </div>
                   <div className="contact-info__content">
-                    <h3 className="contact-info__label">მისამართი</h3>
+                    <h3 className="contact-info__label">{t('contact.address_label')}</h3>
                     <p className="contact-info__text">
                       11 A.Apakidze str. floor #8. Tbilisi, Georgia
                     </p>
@@ -49,7 +51,7 @@ const Contact = () => {
                     <span className="material-symbols-outlined contact-info__icon">call</span>
                   </div>
                   <div className="contact-info__content">
-                    <h3 className="contact-info__label">ტელეფონი</h3>
+                    <h3 className="contact-info__label">{t('contact.phone_label')}</h3>
                     <p className="contact-info__text">
                       Mob: +995 599 646410<br />
                       Office: +995 32 2194447
@@ -63,7 +65,7 @@ const Contact = () => {
                     <span className="material-symbols-outlined contact-info__icon">mail</span>
                   </div>
                   <div className="contact-info__content">
-                    <h3 className="contact-info__label">ელ-ფოსტა</h3>
+                    <h3 className="contact-info__label">{t('contact.email_label')}</h3>
                     <p className="contact-info__text">
                       z.gigauri@alogistics.ge<br />
                       office@alogistics.ge

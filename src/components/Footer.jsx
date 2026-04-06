@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container">
@@ -15,18 +17,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="footer__col">
-            <h4 className="footer__col-title">სწრაფი ბმულები</h4>
+            <h4 className="footer__col-title">{t('footer.quick_links')}</h4>
             <ul className="footer__list">
-              <li><Link to="/services" className="footer__link">სერვისები</Link></li>
-              <li><Link to="/about" className="footer__link">ჩვენს შესახებ</Link></li>
-              <li><a href="#" className="footer__link">ტვირთის თვალთვალი</a></li>
-              <li><a href="#" className="footer__link">კონფიდენციალურობის პოლიტიკა</a></li>
+              <li><Link to="/services" className="footer__link">{t('header.nav_services')}</Link></li>
+              <li><Link to="/about" className="footer__link">{t('header.nav_about')}</Link></li>
+              <li><a href="#" className="footer__link">{t('footer.cargo_tracking')}</a></li>
+              <li><a href="#" className="footer__link">{t('footer.privacy_policy')}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="footer__col">
-            <h4 className="footer__col-title">საკონტაქტო ინფორმაცია</h4>
+            <h4 className="footer__col-title">{t('footer.contact_info')}</h4>
             <ul className="footer__list">
               <li className="footer__contact-item">
                 <span className="material-symbols-outlined footer__contact-icon">location_on</span>
@@ -49,7 +51,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="footer__bottom">
           <p className="footer__copy">
-            &copy; {new Date().getFullYear()} ალიანს ლოჯისტიკი. ყველა უფლება დაცულია.
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
           <div className="footer__socials">
             <a href="#" className="footer__social">Facebook</a>

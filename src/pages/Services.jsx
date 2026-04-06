@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import './services.css'; // importing services specific css
+import './services.css';
+import { useTranslation } from 'react-i18next'; // importing services specific css
 
 const Services = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     // Scroll-reveal on service rows
     const revealTargets = document.querySelectorAll(".service-row__layout, .cta__inner");
@@ -73,7 +75,7 @@ const Services = () => {
         ></div>
         <div className="hero-banner__overlay"></div>
         <div className="container">
-          <h1 className="hero-banner__title">ჩვენი სერვისები</h1>
+          <h1 className="hero-banner__title">{t("services.title")}</h1>
         </div>
       </section>
 
@@ -83,23 +85,23 @@ const Services = () => {
           <div className="services-grid">
             <div className="service-item">
               <span className="material-symbols-outlined service-item__icon">local_shipping</span>
-              <h3 className="service-item__title">სახმელეთო გადაზიდვები</h3>
+              <h3 className="service-item__title">{t("services.road.title")}</h3>
             </div>
             <div className="service-item">
               <span className="material-symbols-outlined service-item__icon">directions_boat</span>
-              <h3 className="service-item__title">საზღვაო გადაზიდვები</h3>
+              <h3 className="service-item__title">{t("services.sea.title")}</h3>
             </div>
             <div className="service-item">
               <span className="material-symbols-outlined service-item__icon">flight</span>
-              <h3 className="service-item__title">საჰაერო გადაზიდვები</h3>
+              <h3 className="service-item__title">{t("services.air.title")}</h3>
             </div>
             <div className="service-item">
               <span className="material-symbols-outlined service-item__icon">train</span>
-              <h3 className="service-item__title">სარკინიგზო გადაზიდვები</h3>
+              <h3 className="service-item__title">{t("services.rail.title")}</h3>
             </div>
             <div className="service-item">
               <span className="material-symbols-outlined service-item__icon">warehouse</span>
-              <h3 className="service-item__title">არაგაბარიტული გადაზიდვები</h3>
+              <h3 className="service-item__title">{t("services.oversize.title")}</h3>
             </div>
           </div>
         </div>
@@ -111,38 +113,35 @@ const Services = () => {
         <div className="container land_freight_container">
           <div className="service-row__layout">
             <div className="service-row__text">
-              <h2 className="service-row__title">სახმელეთო გადაზიდვები</h2>
+              <h2 className="service-row__title">{t("services.road.title")}</h2>
 
               <h4 style={{ marginTop: "1.5rem", color: "var(--navy)" }}>
-                მთლიანი ტვირთის გადაზიდვა (FTL)
+                {t("home.road_ftl")}
               </h4>
               <p className="service-row__desc">
-                კომპანიის ერთ ერთი პრიორიტეტული მიმართულებაა სახმელეთო
-                გადაზიდვები. „ალიანს ლოჯისტიკი“ ახორციელებს როგორც საქართველოში
-                იმპორტს, ასევე ტრანზიტული ტვირთების გადაზიდვას საქართველოს
-                გავლით ევროპიდან აზიაში და პირიქით. ჩვენი მომსახურება მოიცავს:
+                {t("services.road.p1")}
               </p>
 
               <ul className="checklist">
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>კარიდან კარამდე გადაზიდვა</span>
+                  <span>{t("services.road.check1")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სახიფათო, აალებადი ADR ტიპის ტვირთების გადაზიდვა</span>
+                  <span>{t("services.road.check2")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>ალკოჰოლური სასმელების გადაზიდვა</span>
+                  <span>{t("services.road.check3")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>შესაბამისი საბაჟო ფორმალობების უზრუნველყოფა</span>
+                  <span>{t("services.road.check4")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>დასაწყობება შესაბამის საბაჟო ტერმინალებზე</span>
+                  <span>{t("services.road.check5")}</span>
                 </li>
               </ul>
             </div>
@@ -171,38 +170,36 @@ const Services = () => {
 
             <div className="service-row__text">
               <h4 style={{ marginTop: "1.5rem", color: "var(--navy)" }}>
-                ნაკრები ტვირთის გადაზიდვა (LTL)
+                {t("home.road_ltl")}
               </h4>
               <p className="service-row__desc">
-                შპს „ალიანს ლოჯისტიკი“ გამოირჩევა კონკურენტული ფასებით ნაკრები
-                ტვირთების გადაზიდვის მიმართულებაში. ტვირთების კონსოლიდირება
-                ხდება ევროპის რამოდენიმე ქალაქში. ასევე აზიაში და თურქეთში.
+                {t("services.road.p2")}
               </p>
 
               <ul className="checklist">
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სტანდარტული მშრალი ტვირთების გადაზიდვას</span>
+                  <span>{t("services.road.check6")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სამაცივრე და აალებადი ტვირთების გადაზიდვა</span>
+                  <span>{t("services.road.check7")}</span>
                 </li>   
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>კარიდან კარამდე მიტანის უზრუნველყოფა</span>
+                  <span>{t("services.road.check8")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>EX 1-ის, EURO1, CMR, T1 დოკუმენტის მომზადება</span>
+                  <span>{t("services.road.check9")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>დასაწყობება შესაბამის საბაჟო და კერძო ტერმინალებზე.</span>
+                  <span>{t("services.road.check10")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>ევროპის ნებისმიერ ქვეყანაში სატრანსპორტო-საბროკერო მომსახურების უზრუნველყოფას</span>
+                  <span>{t("services.road.check11")}</span>
                 </li>
               </ul>
             </div>
@@ -215,46 +212,43 @@ const Services = () => {
         <div className="container">
           <div className="service-row__layout service-row__layout--reverse">
             <div className="service-row__text">
-              <h2 className="service-row__title">საჰაერო გადაზიდვები</h2>
+              <h2 className="service-row__title">{t("services.air.title")}</h2>
               <p className="service-row__desc">
-                შპს „ალიანს ლოჯისტიკში“ საჰაერო გადაზიდვები ხორციელდება ტვირთის
-                აეროპორტიდან აეროპორტამდე და კარიდან კარამდე მიწოდებით. ჩვენი
-                სანდო პარტნიორების ჩართულობით გთავაზობთ საჰაერო გადაზიდვების
-                შემდეგ მომსახურებებს.
+                {t("services.air.p1")}
               </p>
 
               <ul className="checklist">
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>ტვირთის შეგროვება მსოფლიოს მასშტაბით</span>
+                  <span>{t("services.air.check1")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>საბაჟო-საბროკერო მომსახურება</span>
+                  <span>{t("services.air.check2")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>კარიდან კარამდე გადაზიდვა მსოფლიოს მასშტაბით</span>
+                  <span>{t("services.air.check3")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>საკონსულტაციო მომსახურება</span>
+                  <span>{t("services.air.check4")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სახიფათო და სპეციალური ტვირთების გადაზიდვა</span>
+                  <span>{t("services.air.check5")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სწრაფი საექსპედიტორო მომსახურება მსოფლიოს მასშტაბით</span>
+                  <span>{t("services.air.check6")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>ინდივიდუალური დაზღვევა</span>
+                  <span>{t("services.air.check7")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>ტრანსპორტირების დოკუმენტაციის მომზადება</span>
+                  <span>{t("services.air.check8")}</span>
                 </li>
               </ul>
             </div>
@@ -276,38 +270,35 @@ const Services = () => {
         <div className="container">
           <div className="service-row__layout">
             <div className="service-row__text">
-              <h2 className="service-row__title">საზღვაო გადაზიდვები</h2>
+              <h2 className="service-row__title">{t("services.sea.title")}</h2>
               <p className="service-row__desc">
-                გთავაზობთ საზღვაო გადაზიდვებს როგორც მთლიანი, ისე ნაკრები
-                ტვირთების შემთხვევაში. საკონტეინერო გადაზიდვები როგორც პორტიდან
-                პორტამდე, ასევე დატვირთვის მისამართიდან დაცლის მისამართამდე.
-                ჩვენი მომსახურება მოიცავს:
+                {t("services.sea.p1")}
               </p>
 
               <ul className="checklist">
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>მთლიან და ნაკრებ საკონტეინერო გადაზიდვას</span>
+                  <span>{t("services.sea.check1")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>სახიფათო ტვირთების გადაზიდვას/ADR</span>
+                  <span>{t("services.sea.check2")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>გემის დაფრახტვას</span>
+                  <span>{t("services.sea.check3")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>პორტიდან პორტამდე ტრანსპორტირებას</span>
+                  <span>{t("services.sea.check4")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>მძიმეწონიანი და არაგაბარიტული ტვირთების პროექტირებას</span>
+                  <span>{t("services.sea.check5")}</span>
                 </li>
                 <li className="checklist__item">
                   <span className="material-symbols-outlined checklist__icon">check_circle</span>
-                  <span>საბაჟო მომსახურებას</span>
+                  <span>{t("services.sea.check6")}</span>
                 </li>
               </ul>
             </div>
@@ -329,12 +320,9 @@ const Services = () => {
         <div className="container">
           <div className="service-row__layout service-row__layout--reverse">
             <div className="service-row__text">
-              <h2 className="service-row__title">სარკინიგზო გადაზიდვები</h2>
+              <h2 className="service-row__title">{t("services.rail.title")}</h2>
               <p className="service-row__desc">
-                კომპანიის პრიოდიტეტული მიმართულება სარკინიგზო გადაზიდვებში
-                წარმოადგენს აზიას. კერძოდ ჩინეთს და ყაზახეთის. აღნიშნული
-                ქვეყნებიდან საქართველოსკენ ხდება როგორც იმპორტი, ასევე ექსპორტი
-                საქართველოდან აზიაში.
+                {t("services.rail.p1")}
               </p>
             </div>
 
@@ -353,18 +341,12 @@ const Services = () => {
         <div className="container">
           <div className="service-row__layout">
             <div className="service-row__text">
-              <h2 className="service-row__title">არაგაბარიტული გადაზიდვები</h2>
+              <h2 className="service-row__title">{t("services.oversize.title")}</h2>
               <p className="service-row__desc">
-                შპს „ალიანს ლოჯისტიკი“ აქტიურად არის ჩართული საპროექტო
-                სამუშაოებში. დამკვეთებს ვთავაზობთ არაგაბარიტული ტვირთების
-                ტრანსპორტირებას სახმელეთო, საზღვაო და სარკინიგზო გზით. ძირითადი
-                მიმართულებებია აგრარული სექტორი, სამშენებლო სფერი, მძიმე ტექნიკა
-                და ა.შ.
+                {t("services.oversize.p1")}
               </p>
               <p className="service-row__desc">
-                გადაზიდვისას განსაკუთრებული ყურადღება ექცევა სწორი დატვირთვის
-                კონტროლს და სადაზღვეო პირობებს. რასაც გადაზიდვის რისკები
-                მინიმუმამდე დაჰყავს.
+                {t("services.oversize.p2")}
               </p>
             </div>
 
