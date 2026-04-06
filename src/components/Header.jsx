@@ -53,24 +53,14 @@ const Header = () => {
                 <span>Office: +995 32 2194447</span>
               </div>
             </div>
-            <LanguageSwitcher />
           </div>
+          <LanguageSwitcher />
         </div>
       </div>
 
       {/* Bottom row: nav, socials, CTA */}
       <div className="header__bottom">
         <div className="container header__bottom-inner">
-          <button 
-            className="hamburger" 
-            aria-label="Toggle Navigation" 
-            aria-expanded={isMobileMenuOpen}
-            onClick={toggleMobileMenu}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </button>
 
           <nav className="nav">
             <Link to="/" className={getLinkClass("/")} onClick={closeMobileMenu}>{t('header.nav_home')}</Link>
@@ -92,8 +82,6 @@ const Header = () => {
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
-
-            <Link to="/contact" className="btn btn--primary btn--sm header__cta">{t('header.cta_contact')}</Link>
           </div>
         </div>
       </div>

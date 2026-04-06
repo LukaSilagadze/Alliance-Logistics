@@ -9,36 +9,27 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div 
-      className="language-switcher" 
-      style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '5px', 
-        marginLeft: '15px',
-        justifyContent: 'center'
-      }}
-    >
+    <div className="language-switcher">
       <button 
         onClick={() => changeLanguage('ka')} 
-        style={{ background: 'none', border: 'none', cursor: i18n.language === 'ka' ? 'default' : 'pointer', padding: 0, opacity: i18n.language === 'ka' ? 1 : 0.5 }}
+        className={`language-btn ${i18n.language === 'ka' ? 'active' : ''}`}
         title="Georgian"
       >
-        <span className="fi fi-ge" style={{ fontSize: '1.2rem', borderRadius: '2px' }}></span>
+        <span className="fi fi-ge"></span>
       </button>
       <button 
         onClick={() => changeLanguage('en')} 
-        style={{ background: 'none', border: 'none', cursor: i18n.language === 'en' ? 'default' : 'pointer', padding: 0, opacity: i18n.language === 'en' ? 1 : 0.5 }}
+        className={`language-btn ${i18n.language === 'en' ? 'active' : ''}`}
         title="English"
       >
-        <span className="fi fi-gb" style={{ fontSize: '1.2rem', borderRadius: '2px' }}></span>
+        <span className="fi fi-gb"></span>
       </button>
       <button 
         onClick={() => changeLanguage('ru')} 
-        style={{ background: 'none', border: 'none', cursor: i18n.language === 'ru' ? 'default' : 'pointer', padding: 0, opacity: i18n.language === 'ru' ? 1 : 0.5 }}
+        className={`language-btn ${i18n.language === 'ru' ? 'active' : ''}`}
         title="Russian"
       >
-        <span className="fi fi-ru" style={{ fontSize: '1.2rem', borderRadius: '2px' }}></span>
+        <span className="fi fi-ru"></span>
       </button>
     </div>
   );
