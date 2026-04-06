@@ -76,6 +76,7 @@ const Header = () => {
             <Link to="/" className={getLinkClass("/")} onClick={closeMobileMenu}>{t('header.nav_home')}</Link>
             <Link to="/services" className={getLinkClass("/services")} onClick={closeMobileMenu}>{t('header.nav_services')}</Link>
             <Link to="/about" className={getLinkClass("/about")} onClick={closeMobileMenu}>{t('header.nav_about')}</Link>
+            <Link to="/career" className={getLinkClass("/career")} onClick={closeMobileMenu}>{t('header.nav_career')}</Link>
             <Link to="/contact" className={getLinkClass("/contact")} onClick={closeMobileMenu}>{t('header.nav_contact')}</Link>
           </nav>
 
@@ -103,6 +104,7 @@ const Header = () => {
           <Link to="/" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_home')}</Link>
           <Link to="/services" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_services')}</Link>
           <Link to="/about" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_about')}</Link>
+          <Link to="/career" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_career')}</Link>
           <Link to="/contact" className="mobile-menu__link" onClick={closeMobileMenu}>{t('header.nav_contact')}</Link>
         </nav>
       </div>
