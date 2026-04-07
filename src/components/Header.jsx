@@ -60,7 +60,7 @@ const Header = () => {
 
       {/* Bottom row: nav, socials, CTA */}
       <div className="header__bottom">
-        <div className="container header__bottom-inner">
+        <div className="header__bottom-inner">
 
           <nav className="nav">
             <Link to="/" className={getLinkClass("/")} onClick={closeMobileMenu}>{t('header.nav_home')}</Link>

@@ -28,7 +28,7 @@ const Home = () => {
 
       {/* Services */}
       <section className="services">
-        <div className="container services__container">
+        <div className="services__container">
           <div className="services__nav">
             <div 
               className={`services__nav-item ${activeTab === 'air' ? 'active' : ''}`} 

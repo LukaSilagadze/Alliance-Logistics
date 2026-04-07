@@ -274,7 +274,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 0.75rem 5rem;
   gap: 1.5rem;
 }
 
@@ -284,25 +284,14 @@ a {
   gap: 2rem;
 }
 
-@media (max-width: 1023px) {
-  .nav {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nav__link {
-    font-size: 0.8rem;
-    padding: 0.5rem 0.25rem;
-  }
-}
+
 
 .nav__link {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-300);
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.25rem ;
   transition: color var(--transition);
 }
 
@@ -310,7 +299,7 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.4rem;
+  bottom: 0;
   width: 0;
   height: 2px;
   background-color: var(--primary);
@@ -325,6 +314,19 @@ a {
 
 .nav__link--active::after {
   width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav__link {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.25rem;
+  }
 }
 
 .header__bottom-right {
@@ -388,8 +390,9 @@ a {
 
   .header__bottom-inner {
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 0;
+    padding-inline: 0.7rem;
   }
 }
 
@@ -646,9 +649,9 @@ a {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0;
-  min-height: 600px;
+  height: 100%;
   background-color: #fff;
-  border-radius: var(--radius-xl);
+  border-radius: 10px;
   box-shadow: var(--shadow-xl);
   overflow: hidden;
 }
@@ -663,7 +666,6 @@ a {
 .services__nav {
   width: 320px;
   background-color: #fff;
-  border-right: 1px solid var(--border-200);
   display: flex;
   flex-direction: column;
 }
@@ -682,7 +684,6 @@ a {
   align-items: center;
   gap: 1.25rem;
   cursor: pointer;
-  border-bottom: 1px solid var(--border-100);
   transition: all var(--transition);
   position: relative;
 }
@@ -733,6 +734,7 @@ a {
   flex: 1;
   position: relative;
   overflow: hidden;
+  height: auto;
 }
 
 .services__content {
@@ -751,18 +753,18 @@ a {
 
 @media (max-width: 1023px) {
   .services__content {
-    position: relative;
-    inset: auto;
-    height: 0;
-    overflow: hidden;
-    padding: 2.5rem 1.5rem;
+    display: none;
   }
   .services__content.active {
+    display: flex;
+    position: relative;
+    inset: auto;
     height: auto;
     min-height: 400px;
+    padding: 2.5rem 1.5rem;
   }
   .services__display {
-    max-height: 436px;
+    max-height: none;
   }
 }
 
@@ -936,7 +938,6 @@ a {
     position: relative;
     transform: none;
     max-width: 100%;
-    margin: 0 1.5rem;
     top: -40px;
     padding: 2.5rem 2rem;
   }
@@ -1000,6 +1001,9 @@ a {
   .section-header {
     margin-bottom: 2.5rem;
   }
+  .container--stats {
+  padding-top: 0;
+}
 }
 
 .stat {
