@@ -1,9 +1,23 @@
 import React, { useEffect } from 'react';
 import './services.css';
 import { useTranslation } from 'react-i18next'; // importing services specific css
+import { useLocation } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useTranslation();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const elementId = hash.replace('#', '');
+      const element = document.getElementById(elementId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // slight delay to ensure render
+      }
+    }
+  }, [hash]);
   useEffect(() => {
     // Scroll-reveal on service rows
     const revealTargets = document.querySelectorAll(".service-row__layout, .cta__inner");
@@ -109,7 +123,7 @@ const Services = () => {
 
       {/* Alternating Service Rows */}
       {/* Row 1 */}
-      <section className="service-row service-row--white">
+      <section className="service-row service-row--white" id="road-freight">
         <div className="container land_freight_container">
           <div className="service-row__layout">
             <div className="service-row__text">
@@ -208,7 +222,7 @@ const Services = () => {
       </section>
 
       {/* Row 2 */}
-      <section className="service-row service-row--alt">
+      <section className="service-row service-row--alt" id="air-freight">
         <div className="container">
           <div className="service-row__layout service-row__layout--reverse">
             <div className="service-row__text">
@@ -266,7 +280,7 @@ const Services = () => {
       </section>
 
       {/* Row 3 */}
-      <section className="service-row service-row--white">
+      <section className="service-row service-row--white" id="sea-freight">
         <div className="container">
           <div className="service-row__layout">
             <div className="service-row__text">
@@ -316,7 +330,7 @@ const Services = () => {
       </section>
 
       {/* Row 4 */}
-      <section className="service-row service-row--alt">
+      <section className="service-row service-row--alt" id="rail-freight">
         <div className="container">
           <div className="service-row__layout service-row__layout--reverse">
             <div className="service-row__text">
@@ -337,7 +351,7 @@ const Services = () => {
       </section>
 
       {/* Row 5 */}
-      <section className="service-row service-row--white">
+      <section className="service-row service-row--white" id="oversize-freight">
         <div className="container">
           <div className="service-row__layout">
             <div className="service-row__text">

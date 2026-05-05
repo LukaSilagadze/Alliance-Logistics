@@ -11,11 +11,13 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Helper component to scroll to top on page navigation
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 };

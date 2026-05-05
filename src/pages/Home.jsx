@@ -80,7 +80,7 @@ const Home = () => {
                 <p className="services__desc">
                   {t('home.air_desc')}
                 </p>
-                <Link to="/services" className="btn btn--primary">{t('home.learn_more')}</Link>
+                <Link to="/services#air-freight" className="btn btn--primary">{t('home.learn_more')}</Link>
               </div>
             </div>
             
@@ -102,7 +102,7 @@ const Home = () => {
                     {t('home.road_ltl_desc')}
                   </span>
                 </p>
-                <Link to="/services" className="btn btn--primary">{t('home.learn_more')}</Link>
+                <Link to="/services#road-freight" className="btn btn--primary">{t('home.learn_more')}</Link>
               </div>
             </div>
             
@@ -116,7 +116,7 @@ const Home = () => {
                 <p className="services__desc">
                   {t('home.sea_desc')}
                 </p>
-                <Link to="/services" className="btn btn--primary">{t('home.learn_more')}</Link>
+                <Link to="/services#sea-freight" className="btn btn--primary">{t('home.learn_more')}</Link>
               </div>
             </div>
             
@@ -130,7 +130,7 @@ const Home = () => {
                 <p className="services__desc">
                   {t('home.rail_desc')}
                 </p>
-                <Link to="/services" className="btn btn--primary">{t('home.learn_more')}</Link>
+                <Link to="/services#rail-freight" className="btn btn--primary">{t('home.learn_more')}</Link>
               </div>
             </div>
             
@@ -144,7 +144,7 @@ const Home = () => {
                 <p className="services__desc">
                   {t('home.oversize_desc')}
                 </p>
-                <Link to="/services" className="btn btn--primary">{t('home.learn_more')}</Link>
+                <Link to="/services#oversize-freight" className="btn btn--primary">{t('home.learn_more')}</Link>
               </div>
             </div>
           </div>
