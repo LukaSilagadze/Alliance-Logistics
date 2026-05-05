@@ -7,6 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Career from './pages/Career';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Helper component to scroll to top on page navigation
 const ScrollToTop = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>

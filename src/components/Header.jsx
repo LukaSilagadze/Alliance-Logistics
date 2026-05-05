@@ -72,13 +72,13 @@ const Header = () => {
 
           <div className="header__bottom-right">
             <div className="header__socials">
-              <a href="#" className="header__social-link" aria-label="Facebook">
+              <a href="#" className="header__social-link" aria-label="Facebook" target='_blank'>
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://wa.me/995599646410" className="header__social-link" aria-label="Whatsapp">
+              <a href="https://wa.me/995599646410" className="header__social-link" aria-label="Whatsapp" target='_blank'>
                 <i className="fa-brands fa-whatsapp"></i>
               </a>
-              <a href="#" className="header__social-link" aria-label="LinkedIn">
+              <a href="#" className="header__social-link" aria-label="LinkedIn" target='_blank'>
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </div>

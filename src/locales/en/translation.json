@@ -121,5 +121,22 @@
     "submit_btn": "Send Application",
     "success_msg": "Your application has been sent successfully!",
     "error_msg": "There was an error sending your application."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: May 2026",
+    "intro": "At Alliance Logistics, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.",
+    "section1_title": "1. Information We Collect",
+    "section1_text": "We only collect information that you voluntarily provide to us when you fill out our Career application form. This includes your First Name, Last Name, Email Address, Phone Number, and your CV (Curriculum Vitae).",
+    "section2_title": "2. How We Use Your Information",
+    "section2_text": "The information we collect is used exclusively for the purpose of reviewing your job application and communicating with you regarding potential employment opportunities at Alliance Logistics. We only retain this information for as long as we are in contact with you regarding your application.",
+    "section3_title": "3. Cookies and Tracking",
+    "section3_text": "Our website does not use tracking cookies or analytics software to monitor your behavior. We only use local storage/cookies to remember your preferred language setting (Georgian, English, or Russian) so you do not have to switch languages upon every visit.",
+    "section4_title": "4. Data Sharing",
+    "section4_text": "We respect your privacy and do not sell, trade, or share your personal information with third parties. Form submissions from our website are processed securely via a third-party service provider solely for the purpose of delivering the information to our team.",
+    "section5_title": "5. Contact Us",
+    "section5_text": "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:",
+    "email1": "info@alogistics.ge",
+    "email2": "office@alogistics.ge"
   }
 }

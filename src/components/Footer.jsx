@@ -21,8 +21,9 @@ const Footer = () => {
             <ul className="footer__list">
               <li><Link to="/services" className="footer__link">{t('header.nav_services')}</Link></li>
               <li><Link to="/about" className="footer__link">{t('header.nav_about')}</Link></li>
-              <li><a href="#" className="footer__link">{t('footer.cargo_tracking')}</a></li>
-              <li><a href="#" className="footer__link">{t('footer.privacy_policy')}</a></li>
+              <li><Link to="/contact" className="footer__link">{t('header.nav_contact')}</Link></li>
+              <li><Link to="/career" className="footer__link">{t('header.nav_career')}</Link></li>
+              <li><Link to="/privacy-policy" className="footer__link">{t('footer.privacy_policy')}</Link></li>
             </ul>
           </div>
 
@@ -54,9 +55,9 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
           <div className="footer__socials">
-            <a href="#" className="footer__social">Facebook</a>
-            <a href="#" className="footer__social">LinkedIn</a>
-            <a href="#" className="footer__social">Whatsapp</a>
+            <a href="#" className="footer__social" target='_blank'>Facebook</a>
+            <a href="#" className="footer__social" target='_blank'>LinkedIn</a>
+            <a href="https://wa.me/995599646410" className="footer__social" target='_blank'>Whatsapp</a>
           </div>
         </div>
       </div>
